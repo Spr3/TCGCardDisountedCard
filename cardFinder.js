@@ -237,7 +237,7 @@ async function getElementValue(page, url) {
                 (await Price2.evaluate(el => el.textContent.trim())).replace(/[^0-9.]/g, '') // Allows digits and the decimal point
             );
 
-            if (GrabThePrice > minprice && Soldcount > mcinsoldin3months) {
+            if (GrabThePrice > minprice && Soldcount > minsoldin3months) {
                 const fs = require('fs');
 
                 const textToAdd = "Sold Count:" + Soldcount + " / The Price: " + GrabThePrice + " / Card Name: " + cardname3 + "------ ID:" + i;
